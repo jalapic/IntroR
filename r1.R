@@ -7,6 +7,8 @@
 
 #do this for the wheels.csv file
 
+wheels
+
 str(wheels)
 
 wheels$day1
