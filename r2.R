@@ -58,10 +58,10 @@ setdiff(colors,mycolors)  # [1] "purple"      setdiff compares two vectors and r
 
 
 #try picking 11 colors
-sample(colors,15)   # ERROR !
+sample(colors,11)   # ERROR !
 ?sample
-sample(colors, 15, replace=TRUE)
-sample(colors, 15, replace=T)
+sample(colors, 11, replace=TRUE)
+sample(colors, 11, replace=T)
 
 
 #let's just pick 100 colors randomly picked with replacement from our vector of 10 colors....

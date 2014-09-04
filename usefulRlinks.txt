@@ -1,0 +1,16 @@
+#### Some useful weblinks
+
+
+#         http://en.wikibooks.org/wiki/R_Programming
+
+#         http://stackoverflow.com/questions/tagged/r
+
+#         http://docs.ggplot2.org/current/
+  
+#         http://www.statmethods.net/
+  
+#         http://www.r-bloggers.com/
+  
+#         http://www.cookbook-r.com/
+  
+#         http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf
