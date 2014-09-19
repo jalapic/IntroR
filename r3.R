@@ -22,6 +22,8 @@ setwd("C:/Users/James Curley/Dropbox/Work/R/teachingR")  #put your folder addres
 setwd("C:/Users/curley/Dropbox/Work/R/teachingR")  #put your folder address here
 df<-read.csv("wheels.csv")
 
+df<-wheels
+
 df
 head(df)
 tail(df)
@@ -72,6 +74,8 @@ View(df) #look at the data sheet
 
 
 #### To change column names ####
+
+colnames(df)
 
 names_x<-colnames(df)
 names_x
@@ -134,6 +138,7 @@ library(dplyr)
 df<-df %>% 
   mutate(total = day1+day2+day3+day4) 
 
+
 head(df)
 
 
@@ -149,6 +154,7 @@ colnames(df) #let's only keep id, day1,day2,day3,day4,strain,total
 newdf<-df[c(1:5,9,12)]   #traditional way
 head(newdf)
 
+newdf<-df[c(1,9,2:5,12)]   #traditional way
 
 
 #dplyr way
@@ -254,6 +260,8 @@ head(df)
 
 head(df)
 
+order(df$age)
+
 #traditional
 df[order(df$age),]
 df[order(-df$age),] #descending
@@ -263,6 +271,7 @@ df[order(df$wheel, -df$day1),]
 #dplyr ways
 df %>% arrange (desc(total))    
 df %>% arrange (wheel,strain)
+
 
 
 

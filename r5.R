@@ -3,10 +3,13 @@
 
 rm(list = ls(all = TRUE))  # clean global environment
 
-setwd("C:/Users/James Curley/Dropbox/Work/R/teachingR")  #put your folder address here
-setwd("C:/Users/curley/Dropbox/Work/R/teachingR")  #put your folder address here
+setwd("C:/Users/James Curley/Dropbox/Work/R/teachingR/IntroR")  #put your folder address here
+setwd("C:/Users/curley/Dropbox/Work/R/teachingR/IntroR")  #put your folder address here
 
 df<-read.csv("wheels1.csv")
+
+df<-wheels1
+
 head(df)
 
 
@@ -38,10 +41,10 @@ length(temp)
 #Standard error doesn't exist in base package of R
 # need to write our own function
 
-sem <- function(x) sqrt(var(x)/length(x))
+sem <- function(x) sqrt(var(x, na.rm=T)/length(x))
 
 sem1<-function(x){
-  sqrt(var(x)/length(x))
+  sqrt(var(x, na.rm=T)/length(x))
 }
 
 sem(df$age)
@@ -65,7 +68,6 @@ median (df$total, na.rm=T)
 mad(df$total, na.rm=T) #the median absolute deviation.
 
 quantile(df$total, c(0.25, 0.5, 0.75), type = 9, na.rm=T)   #look up help function for types
-
 
 
 library(psych)   ### using pscyh package
@@ -109,6 +111,11 @@ df2 <- df1[c(1:4)]
 head(df2)
 
 apply(df2,1,mean)
+df2$averagerevs <- apply(df2,1,mean)
+
+head(df2)
+
+
 apply(df2,1,sem)
 
 
@@ -195,7 +202,7 @@ newdf %>%
 
 newdf %>%
   group_by(sex,parity) %>%
-  summarise_each(funs(mean=mean(., na.rm=TRUE)),latency,min1,total)
+  summarise_each(funs(mean(., na.rm=TRUE)),latency,min1,total)
 
 # adding in 'n' - not sure this is the 'best' way of doing it, but works...
 newdf %>%
@@ -210,6 +217,8 @@ newdf %>%
 
 head(newdf)
 colnames(newdf)
+
+newdf[,5:7]
 
 aggregate(newdf, by=list(newdf$sex,newdf$parity), FUN=length)
 aggregate(newdf[,5:7], by=list(newdf$sex,newdf$parity), FUN=mean, na.rm=T)

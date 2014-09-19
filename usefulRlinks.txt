@@ -1,5 +1,9 @@
 #### Some useful weblinks
 
+##   My favorite:
+#         http://renkun.me/learnR/index.html
+
+
 
 #         http://en.wikibooks.org/wiki/R_Programming
 
