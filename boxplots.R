@@ -209,8 +209,24 @@ oneway.test(total ~ strain, data=wheels1, var.equal=T) #turns off Welch correcti
 
 
 
-
 #### Testing For Homogeneity of Variance (i.e. do all comparison groups have equal variances) ####
+
+plot(aov1)  # the output from the standard ANOVA aov()  
+
+# a bit of an  effect of larger residuals for larger fitted values -
+# this is  'heteroscedascity' - 
+# variance in the response might not be equal across groups
+# variance might have a specific relationship with the size of the response.
+
+
+# 1. heteroscedascity plot
+# 2. qqplot (see below)
+# 3. this looks at whether residuals vary with fitted values (e.g. here they go up)
+# 4. This gives an idea of which levels of the factor are best fitted.
+
+
+# test for it...
+
 
 # R incorporates the Bartlett test to test the null hypothesis of equal group variances... 
 # p<.05 means does not satisfy assumption of equal variances
