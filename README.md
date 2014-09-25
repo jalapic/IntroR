@@ -10,3 +10,10 @@ IntroR
 - r3 - Navigating around a dataframe
 - r4 - A quick recap/overview of the different data types in R
 - r5 - Getting summary statistics
+
+
+### Graphs plus stats, in recommended order
+
+- histograms
+- boxplots
+- scatterplots
