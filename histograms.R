@@ -7,12 +7,10 @@
 
 
 
-
 library(ggplot2)
 
 wheels1          #import datasets
 head(wheels1)  
-
 
 
 
@@ -70,7 +68,9 @@ m + geom_histogram(color = "firebrick", fill = "lightcoral", binwidth = 10000)
 
 m + geom_histogram(aes(y = ..density..)) #Removed 4 rows containing non-finite values (stat_density). 
 
-m + geom_histogram(aes(y = ..density..), color = "firebrick", fill = "lightcoral", binwidth = 10000) + 
+m + geom_histogram(aes(y = ..density..), color = "firebrick", fill = "lightcoral", binwidth = 10000)
+
+m + geom_histogram(aes(y = ..density..), color = "firebrick", fill = "lightcoral", binwidth = 10000) +
   geom_density() 
 
 m + geom_histogram(aes(y = ..density..), color = "firebrick", fill = "lightcoral", binwidth = 10000) + 
@@ -119,6 +119,7 @@ ggplot(wheels1, aes(total, fill = strain)) + geom_density(alpha = 0.2) + theme_m
 
 shapiro.test(wheels1$total)
 
+
 # Shapiro-Wilk normality test
 #
 # data:  wheels1$total
@@ -133,8 +134,10 @@ str(mydata)
 lapply(mydata, shapiro.test)  # performs the function shapiro.test across list 'mydata'
   
 
-# If you have <4 groups and many observations per group, then could check for normality separately per group
-# If you have many groups, or few observations per gorup - better to use whole sample as one
+# If you have <4 groups and many observations per group, 
+# then could check for normality separately per group
+# If you have many groups, or few observations per group - 
+# better to use whole sample as one
 
 
 

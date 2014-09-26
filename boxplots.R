@@ -22,6 +22,8 @@ head(wheels1)
 boxplot(total ~ interaction(strain,bench), data=wheels1)  #strains not next to each other
 boxplot(total ~ interaction(bench, strain), data=wheels1)  #easier to interpret
 
+boxplot(total ~ bench*strain, data=wheels1)  #easier to write
+
 plot(total ~ interaction(bench, strain), data=wheels1)  #plot also works - puts in axis titles
 
 boxplot(total ~ interaction(bench, strain), data=wheels1, 
@@ -57,6 +59,24 @@ p + geom_boxplot(aes(fill = factor(strain)))  #can help sometimes
 p + geom_boxplot(aes(fill = factor(bench)))  # see what it did ?
 
 
+## trying to change order of factors
+
+mylevels <- c("B6", "S129", "F1-129B6", "F1-B6129", "Swiss")
+
+wheels1$strain1 <- factor(wheels1$strain, levels = mylevels)
+
+str(wheels1)
+wheels1[10:25,]
+
+ggplot(wheels1, aes(factor(strain), total)) + geom_boxplot()
+ggplot(wheels1, aes(factor(strain1), total)) + geom_boxplot()
+
+levels(wheels1$strain)
+levels(wheels1$strain1)
+
+as.numeric(wheels1$strain)
+as.numeric(wheels1$strain1)
+
 
 # Set aesthetics to fixed value
 p + geom_boxplot(fill = "darkseagreen3", colour = "darkgreen",
@@ -66,6 +86,7 @@ p + geom_boxplot(fill = "darkseagreen3", colour = "darkgreen",
 ## add raw data
 p + geom_boxplot(aes(fill = factor(bench)), alpha=0.2)  + 
     geom_point(aes(color=bench), position=position_dodge(width=0.75), size=4)
+
 
 p + geom_boxplot(aes(fill = factor(strain)), alpha=0.2)  + 
   geom_point(aes(color=strain), size=4)
