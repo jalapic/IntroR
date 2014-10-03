@@ -17,7 +17,7 @@ IntroR
 - histograms
 - boxplots
 - scatterplots
-- 
+
 
 
 
