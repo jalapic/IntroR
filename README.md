@@ -17,3 +17,13 @@ IntroR
 - histograms
 - boxplots
 - scatterplots
+- 
+
+
+
+
+
+
+
+
+Please read the usefulRlinks for more information and also for some of the sources that the odd tutorial was inspired by.
