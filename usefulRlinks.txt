@@ -1,13 +1,20 @@
 #### Some useful weblinks
 
-##   My favorite:
+In putting together these tutorials I've mainly tried to use my own examples and data.
+
+The following links are really useful.  
+
+Sometimes I've used examples from therein when I couldn't find a comparative one for my data.
+
+
+##   My favorites:
 #         http://renkun.me/learnR/index.html
 
+#         http://stackoverflow.com/questions/tagged/r
 
+#         http://stats.stackexchange.com/
 
 #         http://en.wikibooks.org/wiki/R_Programming
-
-#         http://stackoverflow.com/questions/tagged/r
 
 #         http://docs.ggplot2.org/current/
   
@@ -18,3 +25,5 @@
 #         http://www.cookbook-r.com/
   
 #         http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf
+
+#         http://ww2.coastal.edu/kingw/statistics/R-tutorials/
