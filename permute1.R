@@ -192,7 +192,8 @@ sum(randomts >=  2.1496)
 
 #### Example 3.  Randomized One-Way ANOVA ####
 
-# The basic idea is that if the null is true, the group labels are arbitrary - you don't change the distributions by shuffling them.
+# The basic idea is that if the null is true, the group labels are arbitrary
+# you don't change the distributions by shuffling them.
 
 
 # Say we've measured the amount of iron in rocks
