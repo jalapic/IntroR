@@ -210,10 +210,6 @@ sum(randomts >=  2.1496)
 
 # Advantage of Permutations/Ranomizations:
 # - you don't need to worry as much about normality/equal variances
-e don't even care what the parent populations even looked like.
-In this sense, we are making even fewer assumptions. 
-We aren't even concerned with whether we have sampled randomly from a population,
-and frequently we have not. Random sampling is not an issue with randomization tests. 
 
 
 rocks <- read.csv("rocks.csv")
