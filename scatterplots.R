@@ -75,6 +75,8 @@ merge(wheels1,colorsdf)
 
 wheels1 <- merge(wheels1,colorsdf)
 
+
+plot(wheels1$day1,wheels1$day4, pch=19,col=wheels1$color)
 plot(day1,day4, pch=19,col=wheels1$color)
 
 
@@ -111,6 +113,10 @@ ggplot(wheels1, aes(x=day1, y=day4)) + geom_point(shape=19, size=5)
 ggplot(wheels1, aes(x=day1, y=day4)) + geom_point(shape=19, size=5) +
        geom_smooth(method=lm)   # Add linear regression line 
                                 #  (by default includes 95% confidence region)
+
+ggplot(wheels1, aes(x=day1, y=day4)) + geom_point(shape=19, size=5) +
+  geom_smooth(method=lm, level=0.99)   #change confidence limits
+
 
 ggplot(wheels1, aes(x=day1, y=day4)) + geom_point(shape=19, size=5) +
         geom_smooth(method=lm, se=FALSE)   # Add linear regression line 
@@ -183,6 +189,11 @@ ggplot(wheels1, aes(x=day1, y=day4, color=strain, shape=strain)) +
 ggplot(wheels1, aes(x=day1, y=day4, color=strain, shape=strain)) + 
      geom_point(size=5)  +
      geom_smooth(method=lm, se=FALSE)  
+
+ggplot(wheels1, aes(x=day1, y=day4, group=strain)) + 
+  geom_point(size=5)  +
+  geom_smooth(method=lm, se=FALSE)  ### see the difference
+
 
 
 ggplot(wheels1, aes(x=day1, y=day4, color=strain, shape=strain)) + 

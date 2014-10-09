@@ -7,8 +7,8 @@ plot(wheels1$day1,wheels1$day4)
 #### Correlation ####
 
 
-#Pearson's correlation
 
+#Pearson's correlation
 cor.test(wheels1$day1,wheels1$day4)
 cor.test(wheels1$day1,wheels1$day4, method="pearson") #same, as is default
 cor.test(wheels1$day1,wheels1$day4, method="p") #ditto
@@ -48,7 +48,10 @@ cbind(wheels1[,3:6], wheels1[,12:13], wheels1[,10])
 cbind(wheels1[,3:6], wheels1[,12:13], wheels1$wheel)
 cbind(wheels1[,3:6], wheels1[,12:13], wheel=wheels1$wheel) #look at difference between these
 
-whe <- as.matrix ( cbind(wheels1[,3:6], wheels1[,12:13], wheel=wheels1$wheel) )
+whe <- wheels1[c(3:6,12:13,10)]
+str(whe)
+
+whe <- as.matrix (whe)
 
 whe
 plot(whe) #doesn't plot multiple panels if a matrix
@@ -59,7 +62,7 @@ plot(whe1) #will do if dataframe
 
 pair.cor(whe) #pair.cor is a custom made function - use a matrix as argument 1 containing columns of numerical data
 
-
+pair.cor(whe, test=c("spearman"))
 
 
 
@@ -109,6 +112,8 @@ lm.result$fitted[53]
 lm.result$residuals[52]
 lm.result$residuals[53]
 
+
+
 table(wheels1$age) #these are the oldest and 3rd oldest individuals in the study
 
 
@@ -133,6 +138,7 @@ wheels1a <- rbind(wheels1[1:51,] , wheels1[54:80,])
 lm.result1a<-lm(total~age, data=wheels1a)     #outcome~predictor
 
 lm.result1a #age has much less of an effect
+summary(lm.result1a)
 lm.result
 
 # ii. Another is to use a procedure that is robust in the face of outlying points...
@@ -143,6 +149,8 @@ rlm(total ~ age, data=wheels1)
 
 library(robustbase)
 lmrob(total ~ age, data=wheels1)  #better than rlm
+output<-lmrob(total ~ age, data=wheels1)  #better than rlm
+summary(output)
 
 # for more info on robust regression:  http://www.maths.dur.ac.uk/Ug/projects/highlights/CM3/Stuart_Robust_Regression_report.pdf
 
@@ -186,7 +194,6 @@ hist(nhl13$FOpct, col="lightblue")
 boxplot(FOpct~playoffs,data=nhl13)
 
 glm.result<-glm(playoffs1~FOpct,family=binomial,data=nhl13)  # need to have numeric values of outcome var.
-
 summary(glm.result)  
 
 # the "estimate" is the increase in log-odds for a one-unit increase in the independent predictor variable
