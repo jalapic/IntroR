@@ -255,9 +255,9 @@ str(myoutput)
 
 summary(aov(ironvalue ~ sample(place)))[[1]][4]  #first thing in list, fourth index = F-value
 summary(aov(ironvalue ~ sample(place)))[[1]][[4]]  #double bracket gets rid of some of the text
-summary(aov(ironvalue ~ sample(place)))[[1]][[4]][1]  #this is the p-value !!!
+summary(aov(ironvalue ~ sample(place)))[[1]][[4]][1]  #this is the F-value !!!
 
-#now let's get that p-value 10,000 times
+#now let's get that F-value 10,000 times
 
 replicate(10000, summary(aov(ironvalue ~ sample(place)))[[1]][[4]][1])   #this will take about 1-2 minutes
 
