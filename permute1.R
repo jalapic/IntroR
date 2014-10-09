@@ -212,6 +212,9 @@ sum(randomts >=  2.1496)
 # - you don't need to worry as much about normality/equal variances
 
 
+
+# Example 3a
+
 rocks <- read.csv("rocks.csv")
 
 rocks
@@ -270,7 +273,7 @@ sum(myp>=3.441) /10000     # [1] 0.0417   - only 4.17% of samples had F values h
 
 
 
-#####  Example 2b
+#####  Example 3b
 
 boxplot(value2 ~ ids2, rocks)
 
@@ -290,7 +293,7 @@ sum(myp>=2.766) /10000  #[1] 0.0558
 
 
 
-# Example 2c  - from bloodwork.csv
+# Example 3c  - from bloodwork.csv
 
 boxplot(immuncount ~ state, df)
 
