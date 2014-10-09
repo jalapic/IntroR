@@ -11,6 +11,9 @@ This is why sometimes I repeat myself a lot or change one thing incrementally.
 You will probably be fine to just go through these by yourself, but if you need help just ask. 
 
 
+I add to this repository weekly currently (as of October 2014).
+
+
 I first go over some basics of R, though I like to sprinkle some more interesting things in the first few tutorials too.
 Then we discuss some simple plotting in base-r and ggplot2.
 Interspersed with that we discuss basic statistical analyses.
@@ -28,6 +31,7 @@ NOTE:   As I expand this, I acknowledge the repository is getting messy - I will
 
 
 NOTE2:  As I put this together, I have obviously brought together a lot of information from a lot of sources.  Most (all, I hope) of these are listed in the file called   "usefulRlinks.txt"  .   Please use those resources.   Where I have taken something directly from somebody else's webpage, I have added that link/reference to the original author (e.g. the multiplecortest.R function).
+
 
 
 
@@ -56,6 +60,8 @@ NOTE2:  As I put this together, I have obviously brought together a lot of infor
 
 
 
+
+
 ### There are a number of csv files used as example datasets
 
 - bloodwork.csv
@@ -74,4 +80,4 @@ NOTE2:  As I put this together, I have obviously brought together a lot of infor
 
 
 
-Please read the usefulRlinks for more information and also for some of the sources that the odd tutorial was inspired by.
+Please read the usefulRlinks.txt file for more information and also for some of the sources that the odd tutorial was inspired by.
