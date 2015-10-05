@@ -4,7 +4,7 @@ IntroR
 
 ### Here are some introductory tutorials and csv files for learning R
 
-These are files that I use in class to teach begginers/intermediates various things in R.
+These are files that I use in class to teach beginners/intermediates various things in R.
 I have written them with the intention of discussing the code as we go through it in class.
 This is why sometimes I repeat myself a lot or change one thing incrementally.
 
